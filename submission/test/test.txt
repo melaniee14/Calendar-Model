@@ -1,0 +1,15 @@
+create calendar --name working --timezone America/New_York
+create calendar --name lalala --timezone America/Los_Angeles
+create event sleep from 2025-06-07T14:30 to 2025-06-07T16:30 repeats S for 3 times
+use calendar --name working
+create event sleep from 2025-06-07T14:30 to 2025-06-07T16:30 repeats S for 3 times
+create event lalal on 2025-04-14
+print events on 2025-04-14
+edit events subject sleep from 2025-06-14T14:30 with awake
+print events from 2025-06-07T14:30 to 2025-06-28T17:30
+edit series start sleep from 2025-06-07T14:30 to 2025-06-07T15:30
+print events from 2025-06-03T00:00 to 2025-06-29T15:30
+copy events between 2025-06-05 and 2025-07-01 --target lalala 2025-06-08
+use calendar --name lalala
+print events on 2025-04-14
+exit
